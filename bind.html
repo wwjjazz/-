@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>孩子信息绑定页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="style/minireset.css">
+    <link rel="stylesheet" href="style/bind.css">
+</head>
+<body>
+    <div class="wrap">
+        <img src="img/top.png" alt="">
+        <form>
+            <input type="text" placeholder="请输入您要绑定孩子的姓名">
+            <input type="text" placeholder="请输入您的联系手机号">
+            <input type="button" value="提交">
+        </form>
+        <img src="img/bg.png" alt="">
+    </div>
+    <script src="js/rem.js"></script>
+    <script>
+        var inputs = document.querySelectorAll("form input");
+        var openid = "123456";
+        var uid = "1989654";
+        inputs[2].onclick = function () {
+           if(inputs[0].value.trim()&&inputs[1].value.trim()){
+                var ajax = new XMLHttpRequest();
+                ajax.open("POST", "http://interface.simihua.cn/prevent/api/v1/parent_user/create",true);
+                var data = "uid=" + uid
+                    + "&openid=" + openid
+                    + "&phone=" + inputs[1].value.trim()
+                    + "&name=" + inputs[0].value.trim();
+                console.log(data)
+                ajax.onload = function () {
+                    var res = JSON.parse(ajax.responseText);
+                    console.log(res)
+                    if(!res.state){
+                        alert(res.message);
+                        // inputs[0].value = "";
+                        // inputs[1].value = "";
+                    }else{
+                        window.location.href = "personal.html?openid="+openid;
+                    }
+                };
+                ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                ajax.send(data)
+           }else{
+               alert("请输入内容！")
+           }
+        }
+    </script>
+</body>
+</html>

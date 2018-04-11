@@ -1,0 +1,102 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Microsoft YaHei";
+}
+.wrap {
+  background: #ebebeb;
+  min-height: 100%;
+  overflow: auto;
+}
+.wrap .user {
+  background: #fff;
+  margin-top: 0.53333333rem;
+  margin-bottom: 0.53333333rem;
+  padding-top: 0.24rem;
+  padding-left: 0.4rem;
+  padding-bottom: 0.24rem;
+  padding-right: 0.4rem;
+  display: flex;
+}
+.wrap .user img {
+  width: 1.78666667rem;
+  height: 1.78666667rem;
+  margin-right: 0.42666667rem;
+}
+.wrap .user div h3 {
+  font-size: 0.42666667rem;
+  color: #242424;
+  line-height: 0.93333333rem;
+}
+.wrap .user div p {
+  font-size: 0.37333333rem;
+  color: #9d9d9d;
+}
+.wrap .QRCode {
+  background: #fff;
+  margin-top: 0.53333333rem;
+  margin-bottom: 0.53333333rem;
+  padding-top: 0.24rem;
+  padding-left: 0.4rem;
+  padding-bottom: 0.24rem;
+  padding-right: 0.4rem;
+}
+.wrap .QRCode h4 {
+  font-size: 0.4rem;
+  margin-bottom: 10px;
+}
+.wrap .QRCode h4 img {
+  float: right;
+  width: 0.77333333rem;
+}
+.wrap .QRCode ul {
+  border: 1px solid #d1d1d1;
+}
+.wrap .QRCode ul li {
+  display: flex;
+  border-top: 1px solid #c1c1c1;
+  padding: 10px;
+  align-items: center;
+}
+.wrap .QRCode ul li:nth-of-type(1) {
+  border-top: 0;
+}
+.wrap .QRCode ul li .icon-erweima {
+  font-size: 1.6rem;
+}
+.wrap .QRCode ul li div {
+  flex: 1;
+  font-size: 0.34666667rem;
+  line-height: 0.64rem;
+  margin-left: 10px;
+}
+.wrap .QRCode ul li .icon-shanchu {
+  font-size: 0.61333333rem;
+}
+.wrap .infoList {
+  background: #fff;
+  margin-top: 0.53333333rem;
+  margin-bottom: 0.53333333rem;
+  padding-top: 0.24rem;
+  padding-left: 0.4rem;
+  padding-bottom: 0.24rem;
+  padding-right: 0.4rem;
+}
+.wrap .infoList h4 {
+  font-size: 0.4rem;
+  margin-bottom: 10px;
+}
+.wrap .infoList ul {
+  font-size: 0.34666667rem;
+  border: 1px solid #d1d1d1;
+}
+.wrap .infoList ul li {
+  border-top: 1px solid #c1c1c1;
+  padding: 10px;
+  line-height: 0.8rem;
+}
+.wrap .infoList ul li:nth-of-type(1) {
+  border-top: 0;
+}

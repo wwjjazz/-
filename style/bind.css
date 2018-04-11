@@ -1,0 +1,37 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Microsoft YaHei";
+}
+.wrap form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrap form input {
+  text-indent: 0.37333333rem;
+  font-size: 0.26666667rem;
+  height: 0.90666667rem;
+  border-radius: 0.08rem;
+  margin: 0.88rem;
+  margin-top: 0.66666667rem;
+  margin-bottom: 0;
+  padding: 0;
+  outline: none;
+  border: 1px solid #686868;
+  background: none;
+  color: #555;
+}
+.wrap form input:last-child {
+  border: none;
+  height: 0.88rem;
+  font-size: 0.36rem;
+  color: #fff;
+  background: #70c183;
+}
+.wrap img {
+  width: 10rem;
+}
