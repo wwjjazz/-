@@ -42,9 +42,9 @@ xhr.onload = function(){
             });
         }
         var ps = document.querySelectorAll(".info p");
-        ps[0].innerHTML = data.message.phone;
-        ps[1].innerHTML = data.message.address;
-        ps[2].innerHTML = data.message.create_time;
+        ps[0].innerHTML = "联系方式："+data.message.phone;
+        ps[1].innerHTML = "发现位置："+data.message.address;
+        ps[2].innerHTML = "提交时间："+data.message.create_time;
     }
     console.log(data)
 }

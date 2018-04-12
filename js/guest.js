@@ -6,6 +6,7 @@ var map = new AMap.Map('map', {
     resizeEnable: true,
     zoom: 11
 });
+var wrap = document.querySelector(".wrap");
 map.plugin('AMap.Geolocation', function () {
     geolocation = new AMap.Geolocation({
         enableHighAccuracy: true,//是否使用高精度定位，默认:true
@@ -60,6 +61,10 @@ map.plugin('AMap.Geolocation', function () {
             });
         }
         inputs[2].addEventListener("click", function () {
+            var mask = document.createElement("div");
+            mask.className = "mask";
+            mask.innerHTML = '<div><i class="fa fa-spinner fa-pulse fa-x fa-fw"></i></div>';
+            wrap.appendChild(mask);
             console.log(position)
             if (inputs[0].value.trim() && inputs[1].value.trim()) {
                 var ajax = new XMLHttpRequest();
@@ -78,6 +83,7 @@ map.plugin('AMap.Geolocation', function () {
                     }else{
                         alert(res.message)
                     }
+                    mask.parentNode.removeChild(mask);
                 };
                 ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 ajax.send(data)

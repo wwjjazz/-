@@ -8,6 +8,7 @@ html,body{
 	padding: 0;
 	height: 100%;
 	font-family: "Microsoft YaHei";
+	overflow:hidden;
 }
 .wrap{
 	form{
@@ -17,8 +18,8 @@ html,body{
 		justify-content: space-between;
 		input{
 			.px2rem(text-indent,28);
-			.px2rem(font-size,20);
-			.px2rem(height,68);
+			.px2rem(font-size,40);
+			.px2rem(height,88);
 			.px2rem(border-radius,6);
 			.px2rem(margin,66);
 			.px2rem(margin-top,50);
@@ -30,8 +31,8 @@ html,body{
 			color: #555;
 			&:last-child{
 				border: none;
-				.px2rem(height,66);
-				.px2rem(font-size,27);
+				.px2rem(height,86);
+				.px2rem(font-size,40);
 				color: #fff;
 				background: #70c183;
 			}
@@ -39,5 +40,22 @@ html,body{
 	}
 	img{
 		.px2rem(width,750);
+	}
+	.mask{
+		position:fixed;
+		width:100%;
+		height:100%;
+		left:0;
+		top:0;
+		background:rgba(255,255,255,.5);
+		div{
+			padding:60px 30px;
+			color:white;
+			background:rgba(0,0,0,.5);
+			width:60%;
+			margin: 240px auto;
+			text-align: center;
+			line-height: 100%;
+		}
 	}
 }
