@@ -62,10 +62,55 @@ body {
 }
 .wrap .mask div {
   padding: 60px 30px;
-  color: white;
   background: rgba(0, 0, 0, 0.5);
   width: 60%;
   margin: 240px auto;
   text-align: center;
   line-height: 100%;
+  position: relative;
 }
+.wrap .mask div i {
+  color: white;
+  font-size: 26px;
+  width: 60px;
+  margin-left: -30px;
+  margin-top: -15px;
+  position: absolute;
+  animation: loading 1.8s linear 0s infinite normal;
+}
+@keyframes loading {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@-moz-keyframes loading {
+  /* Firefox */
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes loading {
+  /* Safari 和 Chrome */
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@-o-keyframes loading {
+  /* Opera */
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+/*# sourceMappingURL=guest.css.map */

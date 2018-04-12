@@ -63,7 +63,7 @@ map.plugin('AMap.Geolocation', function () {
         inputs[2].addEventListener("click", function () {
             var mask = document.createElement("div");
             mask.className = "mask";
-            mask.innerHTML = '<div><i class="fa fa-spinner fa-pulse fa-x fa-fw"></i></div>';
+            mask.innerHTML = '<div><i class="iconfont icon-loading"></i></div>';
             wrap.appendChild(mask);
             console.log(position)
             if (inputs[0].value.trim() && inputs[1].value.trim()) {
